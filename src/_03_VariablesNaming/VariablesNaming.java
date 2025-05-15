@@ -13,6 +13,8 @@ public class VariablesNaming {
         * 5. 예약어 사용불가 (public, static, void , int, float 등)
         * */
 
+        //boolean은 변수명 앞에 is나 flag
+
         String carBrandName = "KIA";
         String carModelName = "EV6";
         String carColor = "white";

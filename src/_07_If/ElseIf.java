@@ -21,15 +21,5 @@ public class ElseIf {
         //앞에 참이 나온 조건이 있으면 뒤에는 다 무시
     }
 
-    //중첩 if
-    int age = 25;
-    String gender = "남성";
-    if(age>=20){
-        if(gender.equals("남성")){
-            System.out.println("성인 남성");
-        }else System.out.println("성인 여성");
+
         }
-    }
-
-
-}

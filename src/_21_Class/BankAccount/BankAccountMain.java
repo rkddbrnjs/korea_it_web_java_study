@@ -1,0 +1,14 @@
+package _21_Class.BankAccount;
+
+public class BankAccountMain {
+    public static void main(String[] args) {
+        BankAccount bankAccount = new BankAccount();
+
+        bankAccount.deposit(10000);
+        bankAccount.deposit(-4000);
+        bankAccount.deposit(10000);
+        bankAccount.withdraw(15000);
+        bankAccount.withdraw(10000);
+        System.out.println(bankAccount.getBalance());
+    }
+}

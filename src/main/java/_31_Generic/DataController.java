@@ -29,5 +29,11 @@ public class DataController {
         userEntityLombok.setEmail("zxcv");
         ResponseData<UserEntityLombok> user = new ResponseData<>("유저: ", userEntityLombok);
         System.out.println(user);
+
+        // product 패키지
+        //ProductController.java, Product.java
+        //상품 정보, => 상품명(productName), 상품 정보(productInfo)
+
+
     }
 }

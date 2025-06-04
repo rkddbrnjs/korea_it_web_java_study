@@ -16,6 +16,7 @@ public class StrMap {
         strMap1.put("kor2025004", "김준사");
         strMap1.put("kor2025005", "김준오");
         System.out.println(strMap1);
+
         //Map의 순회
         //Map은 직접적으로 순회할 수 없다 => 직접 for-each를 돌릴 수 없음
         //왜냐? 순회하기 위해서는 Iterable<?> 인터페이스를 구현한 클래스이거나 배열(T[])것들만 가능
@@ -52,7 +53,7 @@ public class StrMap {
         boolean isContain = strMap1.containsKey("kor2025003");
         System.out.println(isContain);
 
-        //특정 vlaue의 존재 여부
+        //특정 value의 존재 여부
         boolean isContain2 = strMap1.containsValue("김준일");
         System.out.println(isContain2);
 

@@ -11,7 +11,7 @@ import java.util.Map;
 @AllArgsConstructor
 @ToString
 class Book{
-    private String ison;
+    private String isbn;
     private String title;
     private String author;
     private String price;
@@ -19,6 +19,8 @@ class Book{
 }
 public class BookJson {
     public static void main(String[] args) {
+
+        //Book객체 -> Json 문자열
         Gson gson = new Gson();
         Gson gsonBuilder = new GsonBuilder().setPrettyPrinting().create();
         String BookJson = null;
@@ -30,9 +32,27 @@ public class BookJson {
                 "30000",
                 "도우출판"
         );
-        System.out.println(book);
 
-        Map<String,String> book1 = gson.fromJson(BookJson, Map.class );
+        String jsonBook = gson.toJson(book);
+        System.out.println(jsonBook);
+        System.out.println();
+        //Json -> Map
+        Map<String,String> bookMap = gson.fromJson(jsonBook, Map.class);
+        System.out.println("Json -> Map");
+        System.out.println(bookMap);
+        //Map -> Pretty JSON
+        System.out.println();
+        String prettyJsonFromMap = gsonBuilder.toJson(bookMap);
+        System.out.println("Map -> Pretty JSON");
+        System.out.println(prettyJsonFromMap);
+        System.out.println();
+
+        //JSON -> Book 객체
+        Book parsedBook = gson.fromJson(jsonBook, Book.class);
+        System.out.println("JSON -> Book 객체");
+        System.out.println(parsedBook);
+
+
 
     }
 }
